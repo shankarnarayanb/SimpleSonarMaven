@@ -1,0 +1,20 @@
+<settings>
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Enter your SonarQube instance URL here -->
+                <sonar.host.url>http://192.168.33.10/sonarqube</sonar.host.url>
+				<sonar.tests>src/test</sonar.tests>
+				<sonar.binaries>target/classes</sonar.binaries>
+				<sonar.verbose>true</sonar.verbose>				
+            </properties>
+        </profile>
+     </profiles>
+</settings>
